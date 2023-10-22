@@ -24,10 +24,9 @@ namespace Homework_3
                 if (current.Item2 < 0 || current.Item2 == l.GetLength(1)) continue;
 
                 if (l[current.Item1, current.Item2] == 1) continue;
-                if (l[current.Item1, current.Item2] == 2)
+                if (l[current.Item1, current.Item2] == 0 && (current.Item1 + 1 >= l.GetLength(0) || current.Item2 + 1 >= l.GetLength(1)))
                 {
                     count++;
-                    l[current.Item1, current.Item2] = 1;
                 }
 
                 l[current.Item1, current.Item2] = 1;
